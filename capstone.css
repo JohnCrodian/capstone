@@ -5,3 +5,11 @@
 #wordGuess {
 	visibility: hidden;
 }
+
+#wrongletters {
+	float: left;
+}
+
+.w {
+	border: 1px;
+}
