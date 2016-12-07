@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-<link rel="stylesheet" type="text/css" href="capstone.css">
+<link rel="stylesheet" type="text/css" href="css/capstone.css">
 </head>
 <body>
 
@@ -15,35 +15,40 @@
 
 
 
-<div>
+<div id="lettersguessed">
 	<h2>Letters guessed</h2>
-	<div id="wrongletters">
-	</div>
-</div><br>
+	<div id="wrongletters"> </div>
+</div>
 
 	<div id="wordGuess">
-	<h2>You're out of letter guesses. Guess the word below</h2>
+	<h2 id="wordGuessInstructions">If you think you know the word, guess it here.</h2>
 	<input type="text" id="finalguess"></input>
 	<input id="submit2" type="button" value="Submit"></input>
 	</div>
 
 	<div id="result">			
 	</div>
-	<br><button id="playagain">Play a New Word</button>
+	<button id="playagain">Play a New Word</button>
+	
+
+
+<div id="score">
+Score: 0
+</div>
 
 <div id="wordToGuess">
 <h2>Word is Below:</h2>
-<p><span class="letter w">w</span><span class="letter e">e</span><span class="letter l">l</span><span class="letter t">t</span><span class="letter s">s</span><span class="letter c">c</span><span class="letter h">h</span><span class="letter m">m</span><span class="letter e">e</span><span class="letter r">r</span><span class="letter z">z</span></p>
+<p><span class="borderbox"><span class="letter w">w</span></span><span class="borderbox"><span class="letter e">e</span></span><span class="borderbox"><span class="letter l">l</span></span><span class="borderbox"><span class="letter t">t</span></span><span class="borderbox"><span class="letter s">s</span></span><span class="borderbox"><span class="letter c">c</span></span><span class="borderbox"><span class="letter h">h</span></span><span class="borderbox"><span class="letter m">m</span></span><span class="borderbox"><span class="letter e">e</span></span><span class="borderbox"><span class="letter r">r</span></span><span class="borderbox"><span class="letter z">z</span></span></p>
 
 <div>
 
 <!-- <div id="wordToGuess2">
 <h2>Word is Below:</h2>
-<p><span class="letter e">e</span><span class="letter n">n</span><span class="letter n">n</span><span class="letter u">u</span><span class="letter i">i</span></p>
+<p><span class="borderbox"><span class="letter e">e</span></span><span class="borderbox"><span class="letter n">n</span></span><span class="borderbox"><span class="letter n">n</span></span><span class="borderbox"><span class="letter u">u</span></span><span class="borderbox"><span class="letter i">i</span></span></p>
 </div> -->
 
 <!-- <div id="wordtoGuess3">
-<p><span class="letter p">p</span><span class="letter l">l</span><span class="letter a">a</span><span class="letter t">t</span><span class="letter y">y</span><span class="letter p">p</span><span class="letter u">u</span><span class="letter s">s</span></p>
+<p><span class="borderbox"><span class="letter p">p</span></span><span class="borderbox"><span class="letter l">l</span></span><span class="borderbox"><span class="letter a">a</span></span><span class="borderbox"><span class="letter t">t</span></span><span class="borderbox"><span class="letter y">y</span></span><span class="borderbox"><span class="letter p">p</span></span><span class="borderbox"><span class="letter u">u</span></span><span class="borderbox"><span class="letter s">s</span></span></p>
 </div>   -->
 
 
