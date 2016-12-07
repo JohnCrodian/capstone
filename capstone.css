@@ -1,0 +1,7 @@
+.letter {
+	visibility: hidden;
+}
+
+#wordGuess {
+	visibility: hidden;
+}
