@@ -1,20 +1,29 @@
-var firstWord = new FiveGuesses ("weltschmerz");
+var newGame = new FiveGuesses ("weltschmerz", "ennui", "platypus");
 // var secondWord = new FiveGuesses ("ennui");
 // var thirdWord = new FiveGuesses ("platypus");
 var secondCounter = 0;
 var counter = 0;
 
 
-function FiveGuesses(word) {
+function FiveGuesses(word1, word2, word3) {
+
 
 	this.clickCounter = document.getElementById("submit1").addEventListener("click", function(){
 	counter = counter + 1;
 		})
 
 	this.guesses = document.getElementById("submit1").addEventListener("click", function () {
-	var word1 = word;
+	if (secondCounter == 0) {
+		var word = word1;
+	}
+	if (secondCounter == 1) {
+		var word = word2;
+	}
+	if (secondCounter == 2) {
+		var word = word3;
+	}
 	var guess1 = document.getElementById("guess").value;
-	var letter1 = word1.includes(guess1);
+	var letter1 = word.includes(guess1);
 	if (letter1 == true) {
 	 var showGuess = document.getElementsByClassName(guess1);
 	 document.getElementById("instructions").innerHTML = "YES, " + guess1 + " is in the funky word";
@@ -37,10 +46,15 @@ function FiveGuesses(word) {
 
 	function lastGuess () {
 			document.getElementById("submit2").addEventListener("click", function () {
+			if (secondCounter == 0) {
+				var word = word1;
+			}
+			if (secondCounter == 1) {
+			var word = word2;
+			}
 			var guessEntered = false;
-			var word1 = word;
 			var wordGuess = document.getElementById("finalguess").value;
-				if (wordGuess == word1) {
+				if (wordGuess == word) {
 					document.getElementById("result").innerHTML += "<h2>Correct!</h2>"
 					guessEntered = true;
 				}	
@@ -60,6 +74,10 @@ function FiveGuesses(word) {
 			document.getElementById("result").innerHTML = "";
 			if (secondCounter === 1) {
 				document.getElementById("wordToGuess").innerHTML = '<h2>Word is Below:</h2><p><span class="letter e">e</span><span class="letter n">n</span><span class="letter n">n</span><span class="letter u">u</span><span class="letter i">i</span></p>'
+
+			}
+			if (secondCounter === 2) {
+				document.getElementById("wordToGuess").innerHTML = '<h2>Word is Below:</h2><p><span class="letter p">p</span><span class="letter l">l</span><span class="letter a">a</span><span class="letter t">t</span><span class="letter y">y</span><span class="letter p">p</span><span class="letter u">u</span><span class="letter s">s</span></p>'
 
 			}
 		})
