@@ -1,10 +1,12 @@
 var firstWord = new FiveGuesses ("weltschmerz");
 // var secondWord = new FiveGuesses ("ennui");
 // var thirdWord = new FiveGuesses ("platypus");
+var secondCounter = 0;
 var counter = 0;
 
 
 function FiveGuesses(word) {
+
 	this.clickCounter = document.getElementById("submit1").addEventListener("click", function(){
 	counter = counter + 1;
 		})
@@ -39,17 +41,28 @@ function FiveGuesses(word) {
 			var word1 = word;
 			var wordGuess = document.getElementById("finalguess").value;
 				if (wordGuess == word1) {
-					document.getElementById("wordGuess").innerHTML="<h2>Correct!</h2> <br><button id='playAgain'>Play a New Word</button>";
+					document.getElementById("result").innerHTML += "<h2>Correct!</h2>"
 					guessEntered = true;
 				}	
 				else {
-					document.getElementById("wordGuess").innerHTML="<h2>Wrong, the word was " + word1 + "</h2> <br><button id='playAgain'>Play a New Word</button>"
+					document.getElementById("result").innerHTML += "<h2>Wrong, the word was " + word1 + "</h2>"
 					guessEntered = true;
 				}
 				counter = 0;
 			})
+	}
+	this.newGame = 
+		document.getElementById("playagain").addEventListener("click", function (){
+			secondCounter = secondCounter + 1;
+			document.getElementById("wrongletters").innerHTML = "";
+			document.getElementById("wordGuess").style.visibility = "hidden";
+			document.getElementById("instructions").innerHTML = "Guess your first letter!"
+			document.getElementById("result").innerHTML = "";
+			if (secondCounter === 1) {
+				document.getElementById("wordToGuess").innerHTML = '<h2>Word is Below:</h2><p><span class="letter e">e</span><span class="letter n">n</span><span class="letter n">n</span><span class="letter u">u</span><span class="letter i">i</span></p>'
 
-		}
+			}
+		})
 	
 }//ends object "FiveGuesses"
 
