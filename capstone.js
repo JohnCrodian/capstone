@@ -27,7 +27,7 @@ function FiveGuesses(word1, word2, word3) {
 	var letter1 = word.includes(guess1);
 	if (letter1 == true) {
 	 var showGuess = document.getElementsByClassName(guess1);
-	 document.getElementById("instructions").innerHTML = "YES, " + guess1 + " is in the funky word";
+	 document.getElementById("instructions").innerHTML = "Yeah, " + guess1 + " is in the word";
 	 for (i = 0; i < showGuess.length; i++) {
 	 	showGuess[i].style.visibility = "visible";
 	 }
@@ -40,7 +40,7 @@ function FiveGuesses(word1, word2, word3) {
 		document.getElementById("wrongletters").innerText += guess1 + ", ";	 
 	 }
 	if (counter === 5) {
-		document.getElementById("guessBox1").style.visibility = "hidden";
+		document.getElementById("submit1").style.visibility = "hidden";
 		document.getElementById("wordGuessInstructions").innerText="You're out of letter guesses. Guess the word";
 	}
 	document.getElementById("guess").value = "";
@@ -61,7 +61,7 @@ this.guessTheWord =
 			var guessEntered = false;
 			var wordGuess = document.getElementById("finalguess").value;
 				if (wordGuess === word) {
-					document.getElementById("result").innerHTML += "<h2>Correct!</h2>"
+					document.getElementById("result").innerHTML = "Correct! The word was " + word
 					if (counter === 0) {
 						score = score + 1000000;
 					}
@@ -84,7 +84,7 @@ this.guessTheWord =
 				}	
 				else {
 					score = score - 500;
-					document.getElementById("result").innerHTML += "<h2>Wrong, the word was " + word + "</h2>"
+					document.getElementById("result").innerHTML = "Wrong, the word was " + word
 					document.getElementById("score").innerHTML = "Score: " + score;
 				}
 				counter = 0;
@@ -98,23 +98,22 @@ this.guessTheWord =
 			document.getElementById("finalguess").value = "";
 			document.getElementById("instructions").innerHTML = "Guess your first letter!"
 			document.getElementById("result").innerHTML = "";
-			document.getElementById("guessBox1").style.visibility = "visible";
+			document.getElementById("submit1").style.visibility = "visible";
 			if (secondCounter === 1) {
-				document.getElementById("wordToGuess").innerHTML = '<h2>Word is Below:</h2><p><span class="borderbox"><span class="letter e">e</span></span><span class="borderbox"><span class="letter n">n</span></span><span class="borderbox"><span class="letter n">n</span></span><span class="borderbox"><span class="letter u">u</span></span><span class="borderbox"><span class="letter i">i</span></span></p>'
-
+				document.getElementById("wordToGuess").innerHTML = '<h2 id="result">Guess the Word</h2><p><span class="borderbox"><span class="letter e">e</span></span><span class="borderbox"><span class="letter n">n</span></span><span class="borderbox"><span class="letter n">n</span></span><span class="borderbox"><span class="letter u">u</span></span><span class="borderbox"><span class="letter i">i</span></span></p>'
+				document.getElementById("hint").innerHTML = "Hint: Amorphous sadness";
 			}
 			if (secondCounter === 2) {
-				document.getElementById("wordToGuess").innerHTML = '<h2>Word is Below:</h2><p><span class="borderbox"><span class="letter p">p</span></span><span class="borderbox"><span class="letter l">l</span></span><span class="borderbox"><span class="letter a">a</span></span><span class="borderbox"><span class="letter t">t</span></span><span class="borderbox"><span class="letter y">y</span></span><span class="borderbox"><span class="letter p">p</span></span><span class="borderbox"><span class="letter u">u</span></span><span class="borderbox"><span class="letter s">s</span></span></p>'
-
+				document.getElementById("wordToGuess").innerHTML = '<h2 id="result">Guess the Word</h2><p><span class="borderbox"><span class="letter p">p</span></span><span class="borderbox"><span class="letter l">l</span></span><span class="borderbox"><span class="letter a">a</span></span><span class="borderbox"><span class="letter t">t</span></span><span class="borderbox"><span class="letter y">y</span></span><span class="borderbox"><span class="letter p">p</span></span><span class="borderbox"><span class="letter u">u</span></span><span class="borderbox"><span class="letter s">s</span></span></p>'
+				document.getElementById("hint").innerHTML = "Hint: Miserable beast";
 			}
 		})
 	
 }//ends object "FiveGuesses"
 
 
-//Create an array of the declared object, make a for loop at the end of the function
-//that declares the next object in the array. Add a method at the beginning of the
-//object to reset everything.
+//Word Submit isn't happening when function starts on a new word. Check what happens to the display of the
+//"result" div when newGame is run
 
 
 

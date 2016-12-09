@@ -7,17 +7,32 @@
 <body>
 
 
-<h1 id="instructions">Guess your first letter!</h1>
-	<div id="guessBox1">
+<div id="wordToGuess">
+<h2 id="result">Guess the Word</h2>
+<p><span class="borderbox"><span class="letter w">w</span></span><span class="borderbox"><span class="letter e">e</span></span><span class="borderbox"><span class="letter l">l</span></span><span class="borderbox"><span class="letter t">t</span></span><span class="borderbox"><span class="letter s">s</span></span><span class="borderbox"><span class="letter c">c</span></span><span class="borderbox"><span class="letter h">h</span></span><span class="borderbox"><span class="letter m">m</span></span><span class="borderbox"><span class="letter e">e</span></span><span class="borderbox"><span class="letter r">r</span></span><span class="borderbox"><span class="letter z">z</span></span></p>
+</div>
+
+<div id="hint">Hint:"World pain"</div>
+
+<div id="middlepart">
+
+<div id="guessBox1">
+	<h2 id="instructions">Guess your first letter!</h2>
 	<input type="text" id="guess"></input>
 	<input id="submit1" type="button" value="Submit"></input>
-	</div>
-
-
+</div>
 
 <div id="lettersguessed">
 	<h2>Letters guessed</h2>
 	<div id="wrongletters"> </div>
+</div>
+
+<div id="score">
+Score: 0
+</div>
+
+
+
 </div>
 
 	<div id="wordGuess">
@@ -26,21 +41,8 @@
 	<input id="submit2" type="button" value="Submit"></input>
 	</div>
 
-	<div id="result">			
-	</div>
-	<button id="playagain">Play a New Word</button>
-	
+<button id="playagain">Play a New Word</button>
 
-
-<div id="score">
-Score: 0
-</div>
-
-<div id="wordToGuess">
-<h2>Word is Below:</h2>
-<p><span class="borderbox"><span class="letter w">w</span></span><span class="borderbox"><span class="letter e">e</span></span><span class="borderbox"><span class="letter l">l</span></span><span class="borderbox"><span class="letter t">t</span></span><span class="borderbox"><span class="letter s">s</span></span><span class="borderbox"><span class="letter c">c</span></span><span class="borderbox"><span class="letter h">h</span></span><span class="borderbox"><span class="letter m">m</span></span><span class="borderbox"><span class="letter e">e</span></span><span class="borderbox"><span class="letter r">r</span></span><span class="borderbox"><span class="letter z">z</span></span></p>
-
-<div>
 
 <!-- <div id="wordToGuess2">
 <h2>Word is Below:</h2>
